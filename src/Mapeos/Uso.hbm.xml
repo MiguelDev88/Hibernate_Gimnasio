@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+  <class name="POJOS.C_Uso" table="usos">
+    <composite-id>
+      <key-many-to-one class="POJOS.C_Socio"  name="socio" column="socio"/>
+      <key-property name="fecha" column="fecha"/>
+      <key-property name="horaInicio" column="horaInicio"/>
+    </composite-id>
+    <property column="horaFin" name="horaFin"/>
+  </class>
+</hibernate-mapping>
